@@ -1,0 +1,73 @@
+srun: warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+
+     Program PW2BGW v.7.3 starts on  1Jan2024 at  0:38:21 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     447002 MiB available memory on the printing compute node when the environment starts
+
+
+     Reading xml data from directory:
+
+     ./out/MOSE2_WS2.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum        1261    1261    367               336547   336547   54441
+
+     Using Slab Decomposition
+
+     Reading collected, re-writing distributed wavefunctions
+
+     NLCC is present
+
+     pw2bgw running with full spinors (non-collinear).
+
+     call write_wfng
+     done write_wfng
+
+     call write_vxcg
+     done write_vxcg
+
+     call write_vscg
+     done write_vscg
+
+     call write_vkbg
+     done write_vkbg
+
+     call write_rhog
+     done write_rhog
+
+
+     write_wfng   :      2.74s CPU      3.87s WALL (       1 calls)
+     write_rhog   :      4.55s CPU      4.67s WALL (       1 calls)
+     write_vxcg   :      0.19s CPU      0.22s WALL (       1 calls)
+     write_vscg   :      0.03s CPU      0.04s WALL (       1 calls)
+     write_vkbg   :      2.86s CPU      4.52s WALL (       1 calls)
+
+     PW2BGW       :     11.55s CPU     15.18s WALL
+
+
+   This run was terminated on:   0:38:36   1Jan2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

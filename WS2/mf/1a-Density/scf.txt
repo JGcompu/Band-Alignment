@@ -1,0 +1,36 @@
+&CONTROL
+  calculation = 'scf'
+  outdir = './out/'
+  prefix = 'MOSE2_WS2'
+  pseudo_dir = './pseudo/'
+/
+&SYSTEM
+  ecutwfc = 125.0
+  ibrav = 4
+  a = 3.187
+  c = 30 
+  nat = 3
+  ntyp = 2
+  noncolin=.true.
+  lspinorb=.true.
+/
+&ELECTRONS
+  electron_maxstep = 100
+  conv_thr = 1e-10
+  mixing_mode = 'plain'
+  mixing_beta = 0.7
+  mixing_ndim = 8
+  diagonalization = 'david'
+  diago_david_ndim = 4
+  diago_full_acc = .true.
+/
+
+ATOMIC_SPECIES
+S      32.065 S_PBE_FR.ABIv0.4.UPF
+W      183.84 W_PBE_FR.ABIv0.4.UPF
+ATOMIC_POSITIONS crystal
+W            -0.0000000000       -0.0000000000        0.5000000000
+S             0.3333333333        0.6666666667        0.5523805091
+S             0.3333333333        0.6666666667        0.4476176596 
+K_POINTS automatic
+6 6 1 0 0 0

@@ -1,0 +1,11 @@
+cell_slab_truncation
+frequency_dependence 1
+dont_check_norms
+band_index_min 19
+band_index_max 30
+
+subsample
+screening_semiconductor
+begin kpoints
+  0.333333333  0.333333333  0.000000000   1.0 
+end

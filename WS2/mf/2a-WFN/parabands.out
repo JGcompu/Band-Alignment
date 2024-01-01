@@ -1,0 +1,1051 @@
+
+ BerkeleyGW version 3.0
+ ParaBands code, Complex version, run on 31-Dec-2023 at 15:38:07 -0800
+
+                                                                 ..o.          
+                                                                .oxxo.         
+                                                               .oxxxxo...      
+                                                               oxxxxxxo.       
+                                                              .oxxxxxxx.       
+                                                              .ooooooxxo..     
+                                                              .oooooooxo..     
+                                                              .oooooxxo...     
+                                                       .........oxooo......    
+                                                 ............................  
+                                             ................................. 
+                                          .................................... 
+           .          ..oo. ....  .................................oooxxxxxxxo.
+     .............oxxxx@ox@@@x@x.....................o...........ooooooooooxx. 
+    .o.........oox@x.oo........xxx@@............ooxxxxo..........ooooxxxxxoxo  
+    .x........x@xxo...............o@xxo........oxxx@@@xoooooooooooooooxxxo...  
+    .o......ox@@o..................oox@o.....ooxxx@xoooxxxxxxxoooooooooooo.... 
+    o..ooooo@@xoooo....ooo...........x@o.....ooxxxxo   .oxxxxxxxxxxooooooo.... 
+    . .oooo@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@....ooooox.     .oxx@@@@@xxoo........ 
+      .ooooxxxxxxxooooooxooooooooooooooxo...oooooxx.        ..ox@xxxoo.........
+      .ooooooxxxx@xoooooooooooooxxoooooooooooxxxxx.            .oxxooooooooxxo.
+     .oooooxxxxx@@@xxxxxxxxxxxxxxxxxxxxxxxxoxxxxo.                .oxxxxxxxxo. 
+   ....oooxxxxx@@@xo..oxxx@@@@@@xxxxoxxoooooooxx.                  .oxxxoo..   
+  .....ooxxxx@@xo.       ........    .ooooooooxxo                              
+  ..oooxxxx@@@o                       .oooooooxoo.                             
+  ....oxooxxxxx.                       .ooo..oooo.                             
+  .....o.ooxxxxxo.                     .oooooooxo.                             
+ ......ooooxxxxxxo.                     .ooooooxoo..                           
+........ooxxxxxxxo..                     .o....oxoo...                         
+.......ooooxxxxxxxo.                     ........oooo.                         
+.ooooooo..ooxxxxoooo.                    .........ooo...                       
+..oxo...ooooxxxoooo..                    .ooo......oooo...                     
+  .ooooo....o.                            .oxxxoo....ooo....                   
+    .oooooo...                              ...ooooo...ooo..                   
+       ...                                     .oo.......                      
+                                               ....ooo...                      
+                      __              __                                       
+ ______              [  |            [  |                 ._____  _          _ 
+|_   _ \              | |  _          | |                /  ___ \| |        | |
+  | |_) | .---.  _. _.| | / |  .---.  | | .---.  _    _ / /    \_|\ \  /\  / / 
+  |  __'./ /__\\[ /`\_| '' <  / /__\\ | |/ /__\\| \  | | |   _____ \ \/  \/ /  
+ _| |__| | \__. | |   | |`\ \ | \___. | || \___. \ \/ / \ \.___| |  \  /\  /   
+|_______/ \.__./[_]  [__|  \_] \.__./[___]\.__./  \  /   \.____./    \/  \/    
+                                                  / /                          
+                                                 /_/                           
+ --------------------------------------------------------------------------------
+ Please cite the main BerkeleyGW paper when using results from this calculation:
+
+ Jack Deslippe, Georgy Samsonidze, David A. Strubbe, Manish Jain, Marvin L.
+ Cohen, and Steven G. Louie, "BerkeleyGW: A Massively Parallel Computer Package
+ for the Calculation of the Quasiparticle and Optical Properties of Materials
+ and Nanostructures," Comput. Phys. Commun. 183, 1269 (2012)
+
+ Aditionally, PLEASE CITE ALL PAPERS REPORTED AT THE END OF THIS CALCULATION.
+ --------------------------------------------------------------------------------
+
+ Running MPI version (parallel)
+ Running with 1280 MPI task(s)
+ Using OpenMP. Number of threads per MPI task: 1
+ Number of threads used for sorting routines: 1
+
+ Compilation flags:
+ - Compiler: GNU
+ - Para. flags: MPI, OMP
+ - Math  flags: USESCALAPACK, UNPACKED, USEFFTW3, HDF5
+ - Debug flags: 
+
+ Git version: GIT_COMMIT
+ Reading parameters from file parabands.inp
+ Running with verbosity level 1 (default).
+
+
+ Options for writing output WFN file:
+ - Using regular HDF5 write operation
+ - Using collective MPI-IO
+
+ Reading self-consistent potential from file VSC
+ Reading wavefunctions from file WFN_in
+ Reading k-point-dependent Kleinman-Bylander projectors from file VKB
+
+ Memory available per MPI task: 7598.264 MB
+
+ Problem description:
+   FFT grid: 45 45 405
+   Size of RHO G-space (gvec%ng): 336547
+   Max. number of G-vectors per k-point: 42165
+   Original number of bands in WFN file: 40
+   Number of spins: 1
+   Number of spinor components: 2
+   Number of k-points: 10
+   Max. number of occ states: 26
+
+ Summary of calculation:
+   Number of bands to generate: 10000
+   Number of k-point pools: 1
+   Number of MPI ranks per pool: 1280
+   Number of idle MPI ranks building Ham.: 0
+   Number of idle MPI ranks diagonalizing Ham.: 20
+   Matrix block size: 64
+   Diagonalization algorithm: -1 (PZHEEVX)
+
+================================================================================
+ 15:38:08   Dealing with k =  0.000000  0.000000  0.000000                1 / 10
+================================================================================
+
+ Constructing and diagonalizing Hamiltonian H of size 84330
+
+
+ Started building local part of H with 66 distributed column(s) at 15:38:08.
+ [ 15:38:08 |   0% ] distributed column  1 / 66.
+ [ 15:38:08 |   3% ] distributed column  3 / 66, remaining: 0 s.
+ [ 15:38:08 |   9% ] distributed column  7 / 66, remaining: 0 s.
+ [ 15:38:08 |  20% ] distributed column 14 / 66, remaining: 0 s.
+ [ 15:38:08 |  29% ] distributed column 20 / 66, remaining: 0 s.
+ [ 15:38:08 |  39% ] distributed column 27 / 66, remaining: 0 s.
+ [ 15:38:08 |  48% ] distributed column 33 / 66, remaining: 0 s.
+ [ 15:38:08 |  59% ] distributed column 40 / 66, remaining: 0 s.
+ [ 15:38:08 |  70% ] distributed column 47 / 66, remaining: 0 s.
+ [ 15:38:08 |  79% ] distributed column 53 / 66, remaining: 0 s.
+ [ 15:38:08 |  89% ] distributed column 60 / 66, remaining: 0 s.
+ [ 15:38:08 |  98% ] distributed column 66 / 66, remaining: 0 s.
+ Finished building local part of H at 15:38:08.
+ Elapsed time: 0 s.
+
+
+ Started building non-local part of H with 198 distributed column(s) at 15:38:08.
+ [ 15:38:08 |   0% ] distributed column   1 / 198.
+ [ 15:38:08 |   1% ] distributed column   3 / 198, remaining: 3 s.
+ [ 15:38:09 |  10% ] distributed column  20 / 198, remaining: 3 s.
+ [ 15:38:09 |  20% ] distributed column  40 / 198, remaining: 3 s.
+ [ 15:38:09 |  30% ] distributed column  60 / 198, remaining: 2 s.
+ [ 15:38:10 |  40% ] distributed column  80 / 198, remaining: 2 s.
+ [ 15:38:10 |  50% ] distributed column 100 / 198, remaining: 1 s.
+ [ 15:38:10 |  60% ] distributed column 119 / 198, remaining: 1 s.
+ [ 15:38:10 |  70% ] distributed column 139 / 198, remaining: 1 s.
+ [ 15:38:10 |  80% ] distributed column 159 / 198, remaining: 0 s.
+ [ 15:38:10 |  90% ] distributed column 179 / 198, remaining: 0 s.
+ Finished building non-local part of H at 15:38:10.
+ Elapsed time: 2 s.
+
+ Diagonalizing H.
+ Using diagonalization routine: PZHEEVX
+
+ BLACS processor grid: 35 x 36; BLOCKSIZE = 64 x 64
+ Number of idle processors: 20
+
+ Beginning ScaLAPACK diagonalization. Size: 84330
+ Done ScaLAPACK diagonalization
+ Done diagonalizing H.
+ Time elapsed: 549.819 s.
+
+ First 28 eigenvalues:
+    #     en (Ry)     en (eV)
+    1   -5.596469  -76.143837
+    2   -5.596469  -76.143837
+    3   -3.492726  -47.520956
+    4   -3.492726  -47.520956
+    5   -2.777962  -37.796099
+    6   -2.777962  -37.796099
+    7   -2.767135  -37.648793
+    8   -2.767135  -37.648793
+    9   -1.252681  -17.043591
+   10   -1.252681  -17.043591
+   11   -1.133499  -15.422039
+   12   -1.133499  -15.422039
+   13   -0.634549   -8.633483
+   14   -0.634549   -8.633483
+   15   -0.389262   -5.296178
+   16   -0.389262   -5.296178
+   17   -0.369976   -5.033783
+   18   -0.369976   -5.033783
+   19   -0.325051   -4.422548
+   20   -0.325051   -4.422548
+   21   -0.297058   -4.041682
+   22   -0.297058   -4.041682
+   23   -0.281164   -3.825425
+   24   -0.281164   -3.825425
+   25   -0.171285   -2.330447
+   26   -0.171285   -2.330447
+   27    0.035027    0.476561
+   28    0.035027    0.476561
+
+ Max. difference between input and output mean-field energies: 4.734E-13 Ry
+ at (ik, band, spin) = (1, 1, 1).
+
+
+ Setting up wavefunctions file WFN.h5 in HDF5 format.
+
+ Writing wavefunctions to file WFN.h5.
+ Done writing wavefunctions.
+ Time elapsed: 19.981 s.
+
+ Writing energies to file WFN.h5.
+ Done writing energies and occupations.
+ Time elapsed: .008 s.
+
+================================================================================
+ 15:47:40   Dealing with k =  0.000000  0.166667  0.000000                2 / 10
+================================================================================
+
+ Constructing and diagonalizing Hamiltonian H of size 84170
+
+
+ Started building local part of H with 66 distributed column(s) at 15:47:40.
+ [ 15:47:40 |   0% ] distributed column  1 / 66.
+ [ 15:47:40 |   3% ] distributed column  3 / 66, remaining: 0 s.
+ [ 15:47:40 |   9% ] distributed column  7 / 66, remaining: 0 s.
+ [ 15:47:40 |  20% ] distributed column 14 / 66, remaining: 0 s.
+ [ 15:47:40 |  29% ] distributed column 20 / 66, remaining: 0 s.
+ [ 15:47:40 |  39% ] distributed column 27 / 66, remaining: 0 s.
+ [ 15:47:40 |  48% ] distributed column 33 / 66, remaining: 0 s.
+ [ 15:47:40 |  59% ] distributed column 40 / 66, remaining: 0 s.
+ [ 15:47:40 |  70% ] distributed column 47 / 66, remaining: 0 s.
+ [ 15:47:40 |  79% ] distributed column 53 / 66, remaining: 0 s.
+ [ 15:47:40 |  89% ] distributed column 60 / 66, remaining: 0 s.
+ [ 15:47:41 |  98% ] distributed column 66 / 66, remaining: 0 s.
+ Finished building local part of H at 15:47:41.
+ Elapsed time: 0 s.
+
+
+ Started building non-local part of H with 198 distributed column(s) at 15:47:41.
+ [ 15:47:41 |   0% ] distributed column   1 / 198.
+ [ 15:47:41 |   1% ] distributed column   3 / 198, remaining: 3 s.
+ [ 15:47:41 |  10% ] distributed column  20 / 198, remaining: 3 s.
+ [ 15:47:42 |  20% ] distributed column  40 / 198, remaining: 3 s.
+ [ 15:47:42 |  30% ] distributed column  60 / 198, remaining: 2 s.
+ [ 15:47:42 |  40% ] distributed column  80 / 198, remaining: 2 s.
+ [ 15:47:42 |  50% ] distributed column 100 / 198, remaining: 1 s.
+ [ 15:47:42 |  60% ] distributed column 119 / 198, remaining: 1 s.
+ [ 15:47:43 |  70% ] distributed column 139 / 198, remaining: 1 s.
+ [ 15:47:43 |  80% ] distributed column 159 / 198, remaining: 0 s.
+ [ 15:47:43 |  90% ] distributed column 179 / 198, remaining: 0 s.
+ Finished building non-local part of H at 15:47:43.
+ Elapsed time: 2 s.
+
+ Diagonalizing H.
+ Using diagonalization routine: PZHEEVX
+
+ BLACS processor grid: 35 x 36; BLOCKSIZE = 64 x 64
+ Number of idle processors: 20
+
+ Beginning ScaLAPACK diagonalization. Size: 84170
+ Done ScaLAPACK diagonalization
+ Done diagonalizing H.
+ Time elapsed: 544.686 s.
+
+ First 28 eigenvalues:
+    #     en (Ry)     en (eV)
+    1   -5.596165  -76.139703
+    2   -5.596165  -76.139703
+    3   -3.493871  -47.536540
+    4   -3.493871  -47.536540
+    5   -2.779024  -37.810544
+    6   -2.779024  -37.810543
+    7   -2.771600  -37.709541
+    8   -2.771600  -37.709541
+    9   -1.220719  -16.608724
+   10   -1.220709  -16.608596
+   11   -1.121684  -15.261294
+   12   -1.121673  -15.261135
+   13   -0.597743   -8.132709
+   14   -0.597740   -8.132673
+   15   -0.452403   -6.155260
+   16   -0.452396   -6.155167
+   17   -0.401930   -5.468540
+   18   -0.401916   -5.468342
+   19   -0.349481   -4.754931
+   20   -0.349464   -4.754699
+   21   -0.331552   -4.510995
+   22   -0.331530   -4.510689
+   23   -0.273917   -3.726831
+   24   -0.273905   -3.726665
+   25   -0.195570   -2.660870
+   26   -0.195559   -2.660712
+   27   -0.002001   -0.027223
+   28   -0.001954   -0.026582
+
+ Max. difference between input and output mean-field energies: 4.636E-13 Ry
+ at (ik, band, spin) = (2, 1, 1).
+
+ Writing wavefunctions to file WFN.h5.
+ Done writing wavefunctions.
+ Time elapsed: 32.761 s.
+
+ Writing energies to file WFN.h5.
+ Done writing energies and occupations.
+ Time elapsed: .014 s.
+
+================================================================================
+ 15:57:20   Dealing with k =  0.000000  0.333333  0.000000                3 / 10
+================================================================================
+
+ Constructing and diagonalizing Hamiltonian H of size 84012
+
+
+ Started building local part of H with 66 distributed column(s) at 15:57:20.
+ [ 15:57:20 |   0% ] distributed column  1 / 66.
+ [ 15:57:20 |   3% ] distributed column  3 / 66, remaining: 0 s.
+ [ 15:57:20 |   9% ] distributed column  7 / 66, remaining: 0 s.
+ [ 15:57:20 |  20% ] distributed column 14 / 66, remaining: 0 s.
+ [ 15:57:20 |  29% ] distributed column 20 / 66, remaining: 0 s.
+ [ 15:57:20 |  39% ] distributed column 27 / 66, remaining: 0 s.
+ [ 15:57:20 |  48% ] distributed column 33 / 66, remaining: 0 s.
+ [ 15:57:20 |  59% ] distributed column 40 / 66, remaining: 0 s.
+ [ 15:57:20 |  70% ] distributed column 47 / 66, remaining: 0 s.
+ [ 15:57:20 |  79% ] distributed column 53 / 66, remaining: 0 s.
+ [ 15:57:20 |  89% ] distributed column 60 / 66, remaining: 0 s.
+ [ 15:57:20 |  98% ] distributed column 66 / 66, remaining: 0 s.
+ Finished building local part of H at 15:57:20.
+ Elapsed time: 0 s.
+
+
+ Started building non-local part of H with 198 distributed column(s) at 15:57:20.
+ [ 15:57:21 |   0% ] distributed column   1 / 198.
+ [ 15:57:21 |   1% ] distributed column   3 / 198, remaining: 3 s.
+ [ 15:57:21 |  10% ] distributed column  20 / 198, remaining: 3 s.
+ [ 15:57:21 |  20% ] distributed column  40 / 198, remaining: 3 s.
+ [ 15:57:22 |  30% ] distributed column  60 / 198, remaining: 2 s.
+ [ 15:57:22 |  40% ] distributed column  80 / 198, remaining: 2 s.
+ [ 15:57:22 |  50% ] distributed column 100 / 198, remaining: 1 s.
+ [ 15:57:22 |  60% ] distributed column 119 / 198, remaining: 1 s.
+ [ 15:57:23 |  70% ] distributed column 139 / 198, remaining: 1 s.
+ [ 15:57:23 |  80% ] distributed column 159 / 198, remaining: 0 s.
+ [ 15:57:23 |  90% ] distributed column 179 / 198, remaining: 0 s.
+ Finished building non-local part of H at 15:57:23.
+ Elapsed time: 2 s.
+
+ Diagonalizing H.
+ Using diagonalization routine: PZHEEVX
+
+ BLACS processor grid: 35 x 36; BLOCKSIZE = 64 x 64
+ Number of idle processors: 20
+
+ Beginning ScaLAPACK diagonalization. Size: 84012
+ Done ScaLAPACK diagonalization
+ Done diagonalizing H.
+ Time elapsed: 544.010 s.
+
+ First 28 eigenvalues:
+    #     en (Ry)     en (eV)
+    1   -5.595557  -76.131427
+    2   -5.595557  -76.131427
+    3   -3.496177  -47.567915
+    4   -3.496177  -47.567915
+    5   -2.785980  -37.905183
+    6   -2.785980  -37.905183
+    7   -2.775352  -37.760587
+    8   -2.775352  -37.760587
+    9   -1.145915  -15.590964
+   10   -1.145895  -15.590690
+   11   -1.094720  -14.894428
+   12   -1.094698  -14.894126
+   13   -0.592528   -8.061752
+   14   -0.592522   -8.061677
+   15   -0.505622   -6.879340
+   16   -0.505538   -6.878190
+   17   -0.494472   -6.727631
+   18   -0.494373   -6.726283
+   19   -0.395491   -5.380923
+   20   -0.395487   -5.380876
+   21   -0.313531   -4.265809
+   22   -0.313522   -4.265680
+   23   -0.289572   -3.939831
+   24   -0.289572   -3.939828
+   25   -0.254175   -3.458231
+   26   -0.254174   -3.458215
+   27    0.006465    0.087959
+   28    0.006484    0.088217
+
+ Max. difference between input and output mean-field energies: 4.574E-13 Ry
+ at (ik, band, spin) = (3, 1, 1).
+
+ Writing wavefunctions to file WFN.h5.
+ Done writing wavefunctions.
+ Time elapsed: 32.532 s.
+
+ Writing energies to file WFN.h5.
+ Done writing energies and occupations.
+ Time elapsed: .015 s.
+
+================================================================================
+ 16:07:00   Dealing with k =  0.000000  0.500000  0.000000                4 / 10
+================================================================================
+
+ Constructing and diagonalizing Hamiltonian H of size 84040
+
+
+ Started building local part of H with 66 distributed column(s) at 16:07:00.
+ [ 16:07:00 |   0% ] distributed column  1 / 66.
+ [ 16:07:00 |   3% ] distributed column  3 / 66, remaining: 0 s.
+ [ 16:07:00 |   9% ] distributed column  7 / 66, remaining: 0 s.
+ [ 16:07:00 |  20% ] distributed column 14 / 66, remaining: 0 s.
+ [ 16:07:00 |  29% ] distributed column 20 / 66, remaining: 0 s.
+ [ 16:07:00 |  39% ] distributed column 27 / 66, remaining: 0 s.
+ [ 16:07:00 |  48% ] distributed column 33 / 66, remaining: 0 s.
+ [ 16:07:00 |  59% ] distributed column 40 / 66, remaining: 0 s.
+ [ 16:07:00 |  70% ] distributed column 47 / 66, remaining: 0 s.
+ [ 16:07:00 |  79% ] distributed column 53 / 66, remaining: 0 s.
+ [ 16:07:00 |  89% ] distributed column 60 / 66, remaining: 0 s.
+ [ 16:07:00 |  98% ] distributed column 66 / 66, remaining: 0 s.
+ Finished building local part of H at 16:07:00.
+ Elapsed time: 0 s.
+
+
+ Started building non-local part of H with 198 distributed column(s) at 16:07:00.
+ [ 16:07:00 |   0% ] distributed column   1 / 198.
+ [ 16:07:00 |   1% ] distributed column   3 / 198, remaining: 3 s.
+ [ 16:07:00 |  10% ] distributed column  20 / 198, remaining: 3 s.
+ [ 16:07:01 |  20% ] distributed column  40 / 198, remaining: 3 s.
+ [ 16:07:01 |  30% ] distributed column  60 / 198, remaining: 2 s.
+ [ 16:07:01 |  40% ] distributed column  80 / 198, remaining: 2 s.
+ [ 16:07:01 |  50% ] distributed column 100 / 198, remaining: 1 s.
+ [ 16:07:01 |  60% ] distributed column 119 / 198, remaining: 1 s.
+ [ 16:07:02 |  70% ] distributed column 139 / 198, remaining: 1 s.
+ [ 16:07:02 |  80% ] distributed column 159 / 198, remaining: 0 s.
+ [ 16:07:02 |  90% ] distributed column 179 / 198, remaining: 0 s.
+ Finished building non-local part of H at 16:07:02.
+ Elapsed time: 2 s.
+
+ Diagonalizing H.
+ Using diagonalization routine: PZHEEVX
+
+ BLACS processor grid: 35 x 36; BLOCKSIZE = 64 x 64
+ Number of idle processors: 20
+
+ Beginning ScaLAPACK diagonalization. Size: 84040
+ Done ScaLAPACK diagonalization
+ Done diagonalizing H.
+ Time elapsed: 545.093 s.
+
+ First 28 eigenvalues:
+    #     en (Ry)     en (eV)
+    1   -5.595252  -76.127284
+    2   -5.595252  -76.127284
+    3   -3.497338  -47.583706
+    4   -3.497338  -47.583706
+    5   -2.790793  -37.970677
+    6   -2.790793  -37.970677
+    7   -2.775728  -37.765698
+    8   -2.775728  -37.765698
+    9   -1.098782  -14.949689
+   10   -1.098782  -14.949689
+   11   -1.079126  -14.682261
+   12   -1.079126  -14.682261
+   13   -0.644551   -8.769556
+   14   -0.644551   -8.769556
+   15   -0.546998   -7.442291
+   16   -0.546998   -7.442291
+   17   -0.493791   -6.718368
+   18   -0.493791   -6.718368
+   19   -0.419667   -5.709863
+   20   -0.419667   -5.709863
+   21   -0.327584   -4.457006
+   22   -0.327584   -4.457006
+   23   -0.267719   -3.642501
+   24   -0.267719   -3.642501
+   25   -0.233995   -3.183668
+   26   -0.233995   -3.183668
+   27    0.031987    0.435205
+   28    0.031987    0.435205
+
+ Max. difference between input and output mean-field energies: 4.645E-13 Ry
+ at (ik, band, spin) = (4, 7, 1).
+
+ Writing wavefunctions to file WFN.h5.
+ Done writing wavefunctions.
+ Time elapsed: 32.709 s.
+
+ Writing energies to file WFN.h5.
+ Done writing energies and occupations.
+ Time elapsed: .015 s.
+
+================================================================================
+ 16:16:40   Dealing with k =  0.000000  0.666667  0.000000                5 / 10
+================================================================================
+
+ Constructing and diagonalizing Hamiltonian H of size 84012
+
+
+ Started building local part of H with 66 distributed column(s) at 16:16:40.
+ [ 16:16:40 |   0% ] distributed column  1 / 66.
+ [ 16:16:40 |   3% ] distributed column  3 / 66, remaining: 0 s.
+ [ 16:16:40 |   9% ] distributed column  7 / 66, remaining: 0 s.
+ [ 16:16:40 |  20% ] distributed column 14 / 66, remaining: 0 s.
+ [ 16:16:40 |  29% ] distributed column 20 / 66, remaining: 0 s.
+ [ 16:16:40 |  39% ] distributed column 27 / 66, remaining: 0 s.
+ [ 16:16:40 |  48% ] distributed column 33 / 66, remaining: 0 s.
+ [ 16:16:40 |  59% ] distributed column 40 / 66, remaining: 0 s.
+ [ 16:16:40 |  70% ] distributed column 47 / 66, remaining: 0 s.
+ [ 16:16:40 |  79% ] distributed column 53 / 66, remaining: 0 s.
+ [ 16:16:40 |  89% ] distributed column 60 / 66, remaining: 0 s.
+ [ 16:16:40 |  98% ] distributed column 66 / 66, remaining: 0 s.
+ Finished building local part of H at 16:16:40.
+ Elapsed time: 0 s.
+
+
+ Started building non-local part of H with 198 distributed column(s) at 16:16:40.
+ [ 16:16:40 |   0% ] distributed column   1 / 198.
+ [ 16:16:40 |   1% ] distributed column   3 / 198, remaining: 3 s.
+ [ 16:16:41 |  10% ] distributed column  20 / 198, remaining: 3 s.
+ [ 16:16:41 |  20% ] distributed column  40 / 198, remaining: 3 s.
+ [ 16:16:41 |  30% ] distributed column  60 / 198, remaining: 2 s.
+ [ 16:16:42 |  40% ] distributed column  80 / 198, remaining: 2 s.
+ [ 16:16:42 |  50% ] distributed column 100 / 198, remaining: 1 s.
+ [ 16:16:42 |  60% ] distributed column 119 / 198, remaining: 1 s.
+ [ 16:16:42 |  70% ] distributed column 139 / 198, remaining: 1 s.
+ [ 16:16:42 |  80% ] distributed column 159 / 198, remaining: 0 s.
+ [ 16:16:42 |  90% ] distributed column 179 / 198, remaining: 0 s.
+ Finished building non-local part of H at 16:16:42.
+ Elapsed time: 2 s.
+
+ Diagonalizing H.
+ Using diagonalization routine: PZHEEVX
+
+ BLACS processor grid: 35 x 36; BLOCKSIZE = 64 x 64
+ Number of idle processors: 20
+
+ Beginning ScaLAPACK diagonalization. Size: 84012
+ Done ScaLAPACK diagonalization
+ Done diagonalizing H.
+ Time elapsed: 541.292 s.
+
+ First 28 eigenvalues:
+    #     en (Ry)     en (eV)
+    1   -5.595557  -76.131427
+    2   -5.595557  -76.131427
+    3   -3.496177  -47.567915
+    4   -3.496177  -47.567915
+    5   -2.785980  -37.905183
+    6   -2.785980  -37.905183
+    7   -2.775352  -37.760587
+    8   -2.775352  -37.760587
+    9   -1.145915  -15.590964
+   10   -1.145895  -15.590690
+   11   -1.094720  -14.894428
+   12   -1.094698  -14.894126
+   13   -0.592528   -8.061752
+   14   -0.592522   -8.061677
+   15   -0.505622   -6.879340
+   16   -0.505538   -6.878190
+   17   -0.494472   -6.727631
+   18   -0.494373   -6.726283
+   19   -0.395491   -5.380923
+   20   -0.395487   -5.380876
+   21   -0.313531   -4.265809
+   22   -0.313522   -4.265680
+   23   -0.289572   -3.939831
+   24   -0.289572   -3.939828
+   25   -0.254175   -3.458231
+   26   -0.254174   -3.458215
+   27    0.006465    0.087959
+   28    0.006484    0.088217
+
+ Max. difference between input and output mean-field energies: 4.681E-13 Ry
+ at (ik, band, spin) = (5, 7, 1).
+
+ Writing wavefunctions to file WFN.h5.
+ Done writing wavefunctions.
+ Time elapsed: 30.404 s.
+
+ Writing energies to file WFN.h5.
+ Done writing energies and occupations.
+ Time elapsed: .015 s.
+
+================================================================================
+ 16:26:14   Dealing with k =  0.000000  0.833333  0.000000                6 / 10
+================================================================================
+
+ Constructing and diagonalizing Hamiltonian H of size 84170
+
+
+ Started building local part of H with 66 distributed column(s) at 16:26:14.
+ [ 16:26:14 |   0% ] distributed column  1 / 66.
+ [ 16:26:14 |   3% ] distributed column  3 / 66, remaining: 0 s.
+ [ 16:26:14 |   9% ] distributed column  7 / 66, remaining: 0 s.
+ [ 16:26:14 |  20% ] distributed column 14 / 66, remaining: 0 s.
+ [ 16:26:14 |  29% ] distributed column 20 / 66, remaining: 0 s.
+ [ 16:26:14 |  39% ] distributed column 27 / 66, remaining: 0 s.
+ [ 16:26:14 |  48% ] distributed column 33 / 66, remaining: 0 s.
+ [ 16:26:14 |  59% ] distributed column 40 / 66, remaining: 0 s.
+ [ 16:26:14 |  70% ] distributed column 47 / 66, remaining: 0 s.
+ [ 16:26:14 |  79% ] distributed column 53 / 66, remaining: 0 s.
+ [ 16:26:14 |  89% ] distributed column 60 / 66, remaining: 0 s.
+ [ 16:26:14 |  98% ] distributed column 66 / 66, remaining: 0 s.
+ Finished building local part of H at 16:26:14.
+ Elapsed time: 0 s.
+
+
+ Started building non-local part of H with 198 distributed column(s) at 16:26:14.
+ [ 16:26:15 |   0% ] distributed column   1 / 198.
+ [ 16:26:15 |   1% ] distributed column   3 / 198, remaining: 4 s.
+ [ 16:26:15 |  10% ] distributed column  20 / 198, remaining: 4 s.
+ [ 16:26:15 |  20% ] distributed column  40 / 198, remaining: 3 s.
+ [ 16:26:16 |  30% ] distributed column  60 / 198, remaining: 2 s.
+ [ 16:26:16 |  40% ] distributed column  80 / 198, remaining: 2 s.
+ [ 16:26:16 |  50% ] distributed column 100 / 198, remaining: 1 s.
+ [ 16:26:16 |  60% ] distributed column 119 / 198, remaining: 1 s.
+ [ 16:26:16 |  70% ] distributed column 139 / 198, remaining: 1 s.
+ [ 16:26:16 |  80% ] distributed column 159 / 198, remaining: 0 s.
+ [ 16:26:17 |  90% ] distributed column 179 / 198, remaining: 0 s.
+ Finished building non-local part of H at 16:26:17.
+ Elapsed time: 2 s.
+
+ Diagonalizing H.
+ Using diagonalization routine: PZHEEVX
+
+ BLACS processor grid: 35 x 36; BLOCKSIZE = 64 x 64
+ Number of idle processors: 20
+
+ Beginning ScaLAPACK diagonalization. Size: 84170
+ Done ScaLAPACK diagonalization
+ Done diagonalizing H.
+ Time elapsed: 543.576 s.
+
+ First 28 eigenvalues:
+    #     en (Ry)     en (eV)
+    1   -5.596165  -76.139703
+    2   -5.596165  -76.139703
+    3   -3.493871  -47.536540
+    4   -3.493871  -47.536540
+    5   -2.779024  -37.810544
+    6   -2.779024  -37.810543
+    7   -2.771600  -37.709541
+    8   -2.771600  -37.709541
+    9   -1.220719  -16.608724
+   10   -1.220709  -16.608596
+   11   -1.121684  -15.261294
+   12   -1.121673  -15.261135
+   13   -0.597743   -8.132709
+   14   -0.597740   -8.132673
+   15   -0.452403   -6.155260
+   16   -0.452396   -6.155167
+   17   -0.401930   -5.468540
+   18   -0.401916   -5.468342
+   19   -0.349481   -4.754931
+   20   -0.349464   -4.754699
+   21   -0.331552   -4.510995
+   22   -0.331530   -4.510689
+   23   -0.273917   -3.726831
+   24   -0.273905   -3.726665
+   25   -0.195570   -2.660870
+   26   -0.195559   -2.660712
+   27   -0.002001   -0.027223
+   28   -0.001954   -0.026582
+
+ Max. difference between input and output mean-field energies: 4.681E-13 Ry
+ at (ik, band, spin) = (6, 1, 1).
+
+ Writing wavefunctions to file WFN.h5.
+ Done writing wavefunctions.
+ Time elapsed: 32.363 s.
+
+ Writing energies to file WFN.h5.
+ Done writing energies and occupations.
+ Time elapsed: .016 s.
+
+================================================================================
+ 16:35:53   Dealing with k =  0.166667  0.166667  0.000000                7 / 10
+================================================================================
+
+ Constructing and diagonalizing Hamiltonian H of size 84022
+
+
+ Started building local part of H with 66 distributed column(s) at 16:35:53.
+ [ 16:35:53 |   0% ] distributed column  1 / 66.
+ [ 16:35:53 |   3% ] distributed column  3 / 66, remaining: 0 s.
+ [ 16:35:53 |   9% ] distributed column  7 / 66, remaining: 0 s.
+ [ 16:35:53 |  20% ] distributed column 14 / 66, remaining: 0 s.
+ [ 16:35:53 |  29% ] distributed column 20 / 66, remaining: 0 s.
+ [ 16:35:53 |  39% ] distributed column 27 / 66, remaining: 0 s.
+ [ 16:35:53 |  48% ] distributed column 33 / 66, remaining: 0 s.
+ [ 16:35:53 |  59% ] distributed column 40 / 66, remaining: 0 s.
+ [ 16:35:53 |  70% ] distributed column 47 / 66, remaining: 0 s.
+ [ 16:35:53 |  79% ] distributed column 53 / 66, remaining: 0 s.
+ [ 16:35:53 |  89% ] distributed column 60 / 66, remaining: 0 s.
+ [ 16:35:53 |  98% ] distributed column 66 / 66, remaining: 0 s.
+ Finished building local part of H at 16:35:53.
+ Elapsed time: 0 s.
+
+
+ Started building non-local part of H with 198 distributed column(s) at 16:35:53.
+ [ 16:35:53 |   0% ] distributed column   1 / 198.
+ [ 16:35:53 |   1% ] distributed column   3 / 198, remaining: 3 s.
+ [ 16:35:54 |  10% ] distributed column  20 / 198, remaining: 3 s.
+ [ 16:35:54 |  20% ] distributed column  40 / 198, remaining: 3 s.
+ [ 16:35:54 |  30% ] distributed column  60 / 198, remaining: 2 s.
+ [ 16:35:55 |  40% ] distributed column  80 / 198, remaining: 2 s.
+ [ 16:35:55 |  50% ] distributed column 100 / 198, remaining: 1 s.
+ [ 16:35:55 |  60% ] distributed column 119 / 198, remaining: 1 s.
+ [ 16:35:55 |  70% ] distributed column 139 / 198, remaining: 1 s.
+ [ 16:35:55 |  80% ] distributed column 159 / 198, remaining: 0 s.
+ [ 16:35:55 |  90% ] distributed column 179 / 198, remaining: 0 s.
+ Finished building non-local part of H at 16:35:55.
+ Elapsed time: 2 s.
+
+ Diagonalizing H.
+ Using diagonalization routine: PZHEEVX
+
+ BLACS processor grid: 35 x 36; BLOCKSIZE = 64 x 64
+ Number of idle processors: 20
+
+ Beginning ScaLAPACK diagonalization. Size: 84022
+ Done ScaLAPACK diagonalization
+ Done diagonalizing H.
+ Time elapsed: 543.968 s.
+
+ First 28 eigenvalues:
+    #     en (Ry)     en (eV)
+    1   -5.595709  -76.133497
+    2   -5.595709  -76.133497
+    3   -3.495704  -47.561471
+    4   -3.495488  -47.558530
+    5   -2.783080  -37.865734
+    6   -2.782700  -37.860567
+    7   -2.776046  -37.770032
+    8   -2.775636  -37.764444
+    9   -1.168549  -15.898920
+   10   -1.164725  -15.846888
+   11   -1.101924  -14.992437
+   12   -1.101450  -14.985993
+   13   -0.562185   -7.648923
+   14   -0.555974   -7.564409
+   15   -0.509868   -6.937109
+   16   -0.507570   -6.905842
+   17   -0.461669   -6.281325
+   18   -0.457996   -6.231351
+   19   -0.424808   -5.779813
+   20   -0.419360   -5.705689
+   21   -0.347440   -4.727159
+   22   -0.328229   -4.465780
+   23   -0.273217   -3.717309
+   24   -0.268951   -3.659258
+   25   -0.240368   -3.270372
+   26   -0.224022   -3.047972
+   27   -0.032638   -0.444064
+   28   -0.012829   -0.174549
+
+ Max. difference between input and output mean-field energies: 4.698E-13 Ry
+ at (ik, band, spin) = (7, 1, 1).
+
+ Writing wavefunctions to file WFN.h5.
+ Done writing wavefunctions.
+ Time elapsed: 28.266 s.
+
+ Writing energies to file WFN.h5.
+ Done writing energies and occupations.
+ Time elapsed: .032 s.
+
+================================================================================
+ 16:45:28   Dealing with k =  0.166667  0.333333  0.000000                8 / 10
+================================================================================
+
+ Constructing and diagonalizing Hamiltonian H of size 84092
+
+
+ Started building local part of H with 66 distributed column(s) at 16:45:28.
+ [ 16:45:28 |   0% ] distributed column  1 / 66.
+ [ 16:45:28 |   3% ] distributed column  3 / 66, remaining: 0 s.
+ [ 16:45:28 |   9% ] distributed column  7 / 66, remaining: 0 s.
+ [ 16:45:28 |  20% ] distributed column 14 / 66, remaining: 0 s.
+ [ 16:45:28 |  29% ] distributed column 20 / 66, remaining: 0 s.
+ [ 16:45:28 |  39% ] distributed column 27 / 66, remaining: 0 s.
+ [ 16:45:28 |  48% ] distributed column 33 / 66, remaining: 0 s.
+ [ 16:45:28 |  59% ] distributed column 40 / 66, remaining: 0 s.
+ [ 16:45:28 |  70% ] distributed column 47 / 66, remaining: 0 s.
+ [ 16:45:28 |  79% ] distributed column 53 / 66, remaining: 0 s.
+ [ 16:45:28 |  89% ] distributed column 60 / 66, remaining: 0 s.
+ [ 16:45:28 |  98% ] distributed column 66 / 66, remaining: 0 s.
+ Finished building local part of H at 16:45:28.
+ Elapsed time: 0 s.
+
+
+ Started building non-local part of H with 198 distributed column(s) at 16:45:28.
+ [ 16:45:28 |   0% ] distributed column   1 / 198.
+ [ 16:45:28 |   1% ] distributed column   3 / 198, remaining: 4 s.
+ [ 16:45:28 |  10% ] distributed column  20 / 198, remaining: 3 s.
+ [ 16:45:29 |  20% ] distributed column  40 / 198, remaining: 3 s.
+ [ 16:45:29 |  30% ] distributed column  60 / 198, remaining: 2 s.
+ [ 16:45:29 |  40% ] distributed column  80 / 198, remaining: 2 s.
+ [ 16:45:29 |  50% ] distributed column 100 / 198, remaining: 1 s.
+ [ 16:45:30 |  60% ] distributed column 119 / 198, remaining: 1 s.
+ [ 16:45:30 |  70% ] distributed column 139 / 198, remaining: 1 s.
+ [ 16:45:30 |  80% ] distributed column 159 / 198, remaining: 0 s.
+ [ 16:45:30 |  90% ] distributed column 179 / 198, remaining: 0 s.
+ Finished building non-local part of H at 16:45:30.
+ Elapsed time: 2 s.
+
+ Diagonalizing H.
+ Using diagonalization routine: PZHEEVX
+
+ BLACS processor grid: 35 x 36; BLOCKSIZE = 64 x 64
+ Number of idle processors: 20
+
+ Beginning ScaLAPACK diagonalization. Size: 84092
+ Done ScaLAPACK diagonalization
+ Done diagonalizing H.
+ Time elapsed: 544.288 s.
+
+ First 28 eigenvalues:
+    #     en (Ry)     en (eV)
+    1   -5.595252  -76.127285
+    2   -5.595252  -76.127284
+    3   -3.497541  -47.586466
+    4   -3.497108  -47.580582
+    5   -2.789687  -37.955626
+    6   -2.788050  -37.933345
+    7   -2.777833  -37.794344
+    8   -2.777741  -37.793086
+    9   -1.105343  -15.038956
+   10   -1.095786  -14.908927
+   11   -1.078186  -14.669468
+   12   -1.077266  -14.656944
+   13   -0.607176   -8.261046
+   14   -0.604198   -8.220533
+   15   -0.553622   -7.532409
+   16   -0.551619   -7.505163
+   17   -0.485016   -6.598984
+   18   -0.480781   -6.541360
+   19   -0.428696   -5.832699
+   20   -0.425995   -5.795952
+   21   -0.382952   -5.210323
+   22   -0.366187   -4.982226
+   23   -0.316218   -4.302358
+   24   -0.315630   -4.294358
+   25   -0.225964   -3.074396
+   26   -0.203170   -2.764269
+   27    0.011140    0.151562
+   28    0.014104    0.191901
+
+ Max. difference between input and output mean-field energies: 4.690E-13 Ry
+ at (ik, band, spin) = (8, 2, 1).
+
+ Writing wavefunctions to file WFN.h5.
+ Done writing wavefunctions.
+ Time elapsed: 32.468 s.
+
+ Writing energies to file WFN.h5.
+ Done writing energies and occupations.
+ Time elapsed: .032 s.
+
+================================================================================
+ 16:55:07   Dealing with k =  0.166667  0.500000  0.000000                9 / 10
+================================================================================
+
+ Constructing and diagonalizing Hamiltonian H of size 84092
+
+
+ Started building local part of H with 66 distributed column(s) at 16:55:07.
+ [ 16:55:07 |   0% ] distributed column  1 / 66.
+ [ 16:55:07 |   3% ] distributed column  3 / 66, remaining: 0 s.
+ [ 16:55:07 |   9% ] distributed column  7 / 66, remaining: 0 s.
+ [ 16:55:07 |  20% ] distributed column 14 / 66, remaining: 0 s.
+ [ 16:55:07 |  29% ] distributed column 20 / 66, remaining: 0 s.
+ [ 16:55:07 |  39% ] distributed column 27 / 66, remaining: 0 s.
+ [ 16:55:07 |  48% ] distributed column 33 / 66, remaining: 0 s.
+ [ 16:55:07 |  59% ] distributed column 40 / 66, remaining: 0 s.
+ [ 16:55:07 |  70% ] distributed column 47 / 66, remaining: 0 s.
+ [ 16:55:07 |  79% ] distributed column 53 / 66, remaining: 0 s.
+ [ 16:55:07 |  89% ] distributed column 60 / 66, remaining: 0 s.
+ [ 16:55:07 |  98% ] distributed column 66 / 66, remaining: 0 s.
+ Finished building local part of H at 16:55:07.
+ Elapsed time: 0 s.
+
+
+ Started building non-local part of H with 198 distributed column(s) at 16:55:07.
+ [ 16:55:07 |   0% ] distributed column   1 / 198.
+ [ 16:55:08 |   1% ] distributed column   3 / 198, remaining: 3 s.
+ [ 16:55:08 |  10% ] distributed column  20 / 198, remaining: 3 s.
+ [ 16:55:08 |  20% ] distributed column  40 / 198, remaining: 3 s.
+ [ 16:55:08 |  30% ] distributed column  60 / 198, remaining: 2 s.
+ [ 16:55:09 |  40% ] distributed column  80 / 198, remaining: 2 s.
+ [ 16:55:09 |  50% ] distributed column 100 / 198, remaining: 1 s.
+ [ 16:55:09 |  60% ] distributed column 119 / 198, remaining: 1 s.
+ [ 16:55:09 |  70% ] distributed column 139 / 198, remaining: 1 s.
+ [ 16:55:09 |  80% ] distributed column 159 / 198, remaining: 0 s.
+ [ 16:55:09 |  90% ] distributed column 179 / 198, remaining: 0 s.
+ Finished building non-local part of H at 16:55:10.
+ Elapsed time: 2 s.
+
+ Diagonalizing H.
+ Using diagonalization routine: PZHEEVX
+
+ BLACS processor grid: 35 x 36; BLOCKSIZE = 64 x 64
+ Number of idle processors: 20
+
+ Beginning ScaLAPACK diagonalization. Size: 84092
+ Done ScaLAPACK diagonalization
+ Done diagonalizing H.
+ Time elapsed: 543.541 s.
+
+ First 28 eigenvalues:
+    #     en (Ry)     en (eV)
+    1   -5.595252  -76.127285
+    2   -5.595252  -76.127284
+    3   -3.497541  -47.586466
+    4   -3.497108  -47.580582
+    5   -2.789687  -37.955626
+    6   -2.788050  -37.933345
+    7   -2.777833  -37.794344
+    8   -2.777741  -37.793086
+    9   -1.105343  -15.038956
+   10   -1.095786  -14.908927
+   11   -1.078186  -14.669468
+   12   -1.077266  -14.656944
+   13   -0.607176   -8.261046
+   14   -0.604198   -8.220533
+   15   -0.553622   -7.532409
+   16   -0.551619   -7.505163
+   17   -0.485016   -6.598984
+   18   -0.480781   -6.541360
+   19   -0.428696   -5.832699
+   20   -0.425995   -5.795952
+   21   -0.382952   -5.210323
+   22   -0.366187   -4.982226
+   23   -0.316218   -4.302358
+   24   -0.315630   -4.294358
+   25   -0.225964   -3.074396
+   26   -0.203170   -2.764269
+   27    0.011140    0.151562
+   28    0.014104    0.191901
+
+ Max. difference between input and output mean-field energies: 4.610E-13 Ry
+ at (ik, band, spin) = (9, 1, 1).
+
+ Writing wavefunctions to file WFN.h5.
+ Done writing wavefunctions.
+ Time elapsed: 30.210 s.
+
+ Writing energies to file WFN.h5.
+ Done writing energies and occupations.
+ Time elapsed: .016 s.
+
+================================================================================
+ 17:04:43   Dealing with k =  0.333333  0.333333  0.000000               10 / 10
+================================================================================
+
+ Constructing and diagonalizing Hamiltonian H of size 83982
+
+
+ Started building local part of H with 66 distributed column(s) at 17:04:43.
+ [ 17:04:43 |   0% ] distributed column  1 / 66.
+ [ 17:04:43 |   3% ] distributed column  3 / 66, remaining: 0 s.
+ [ 17:04:43 |   9% ] distributed column  7 / 66, remaining: 0 s.
+ [ 17:04:43 |  20% ] distributed column 14 / 66, remaining: 0 s.
+ [ 17:04:43 |  29% ] distributed column 20 / 66, remaining: 0 s.
+ [ 17:04:43 |  39% ] distributed column 27 / 66, remaining: 0 s.
+ [ 17:04:43 |  48% ] distributed column 33 / 66, remaining: 0 s.
+ [ 17:04:43 |  59% ] distributed column 40 / 66, remaining: 0 s.
+ [ 17:04:43 |  70% ] distributed column 47 / 66, remaining: 0 s.
+ [ 17:04:43 |  79% ] distributed column 53 / 66, remaining: 0 s.
+ [ 17:04:43 |  89% ] distributed column 60 / 66, remaining: 0 s.
+ [ 17:04:43 |  98% ] distributed column 66 / 66, remaining: 0 s.
+ Finished building local part of H at 17:04:43.
+ Elapsed time: 0 s.
+
+
+ Started building non-local part of H with 198 distributed column(s) at 17:04:43.
+ [ 17:04:44 |   0% ] distributed column   1 / 198.
+ [ 17:04:44 |   1% ] distributed column   3 / 198, remaining: 4 s.
+ [ 17:04:44 |  10% ] distributed column  20 / 198, remaining: 3 s.
+ [ 17:04:45 |  20% ] distributed column  40 / 198, remaining: 3 s.
+ [ 17:04:45 |  30% ] distributed column  60 / 198, remaining: 2 s.
+ [ 17:04:45 |  40% ] distributed column  80 / 198, remaining: 2 s.
+ [ 17:04:45 |  50% ] distributed column 100 / 198, remaining: 1 s.
+ [ 17:04:45 |  60% ] distributed column 119 / 198, remaining: 1 s.
+ [ 17:04:46 |  70% ] distributed column 139 / 198, remaining: 1 s.
+ [ 17:04:46 |  80% ] distributed column 159 / 198, remaining: 0 s.
+ [ 17:04:46 |  90% ] distributed column 179 / 198, remaining: 0 s.
+ Finished building non-local part of H at 17:04:46.
+ Elapsed time: 3 s.
+
+ Diagonalizing H.
+ Using diagonalization routine: PZHEEVX
+
+ BLACS processor grid: 35 x 36; BLOCKSIZE = 64 x 64
+ Number of idle processors: 20
+
+ Beginning ScaLAPACK diagonalization. Size: 83982
+ Done ScaLAPACK diagonalization
+ Done diagonalizing H.
+ Time elapsed: 548.763 s.
+
+ First 28 eigenvalues:
+    #     en (Ry)     en (eV)
+    1   -5.595100  -76.125212
+    2   -5.595100  -76.125212
+    3   -3.498215  -47.595632
+    4   -3.497566  -47.586803
+    5   -2.790583  -37.967815
+    6   -2.787119  -37.920679
+    7   -2.781107  -37.838882
+    8   -2.779942  -37.823039
+    9   -1.083475  -14.741423
+   10   -1.068167  -14.533150
+   11   -1.067869  -14.529095
+   12   -1.066831  -14.514968
+   13   -0.593148   -8.070191
+   14   -0.589359   -8.018641
+   15   -0.562906   -7.658732
+   16   -0.560075   -7.620207
+   17   -0.513134   -6.981538
+   18   -0.488441   -6.645582
+   19   -0.461100   -6.273582
+   20   -0.453173   -6.165737
+   21   -0.408047   -5.551760
+   22   -0.404145   -5.498676
+   23   -0.347390   -4.726478
+   24   -0.342270   -4.656816
+   25   -0.185304   -2.521188
+   26   -0.153850   -2.093232
+   27   -0.039679   -0.539855
+   28   -0.037463   -0.509717
+
+ Max. difference between input and output mean-field energies: 6.689E-13 Ry
+ at (ik, band, spin) = (10, 39, 1).
+
+ Writing wavefunctions to file WFN.h5.
+ Done writing wavefunctions.
+ Time elapsed: 33.718 s.
+
+ Writing energies to file WFN.h5.
+ Done writing energies and occupations.
+ Time elapsed: .016 s.
+
+
+                        CPU (s)        WALL (s)           #
+
+INPUT:                    0.483           0.624           1
+OUTPUT:                 205.252         305.658          11
+HAMILTONIAN:           5469.586        5473.816          10
+
+INPUT WFN:                0.264           0.289           1
+INPUT VSC:                0.101           0.187           1
+INPUT VKB HEAD:           0.088           0.093           1
+INPUT VKB DATA:           1.326           1.331          10
+
+OUTPUT HEADER:            0.018           0.034           1
+OUTPUT WFN:             205.234         305.624          10
+
+HAM KIN:                  0.023           0.097          10
+HAM BUILD LOC:            0.624           0.623          10
+HAM BUILD NL:            23.887          23.969          10
+HAM BUILD NL COMM:        6.633           6.651          30
+HAM DIAG:              5444.962        5449.034          10
+
+TOTAL:                 5676.682        5781.478           1
+

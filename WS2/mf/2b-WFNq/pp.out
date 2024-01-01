@@ -1,0 +1,57 @@
+srun: warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+
+     Program PW2BGW v.7.3 starts on 31Dec2023 at  1: 5:41 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     487131 MiB available memory on the printing compute node when the environment starts
+
+
+     Reading xml data from directory:
+
+     ./out/MOSE2_WS2.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum        1261    1261    421               336547   336547   62247
+
+     Using Slab Decomposition
+
+     Reading collected, re-writing distributed wavefunctions
+
+     NLCC is present
+
+     pw2bgw running with full spinors (non-collinear).
+
+     call write_wfng
+     done write_wfng
+
+
+     write_wfng   :      5.64s CPU      7.99s WALL (       1 calls)
+
+     PW2BGW       :      7.04s CPU     12.92s WALL
+
+
+   This run was terminated on:   1: 5:54  31Dec2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
